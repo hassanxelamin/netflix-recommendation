@@ -1,0 +1,97 @@
+
+/* ------------------------------CSS RESET------------------------------ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* sets boxing-sizing elements and pseudo elements to border-box */
+/* so size of element will calculate from border to border */
+
+*,
+*::before,
+*::after {
+	box-sizing:border-box;
+}
+
+
+/* removes any margin from all elements */
+
+body,
+h1, 
+h2, 
+h3, 
+h4, 
+p, 
+ul, 
+ol, 
+li, 
+figure, 
+figcaption, 
+blockquote, 
+dl,
+dd {
+	margin: 0;
+}
+
+/* removes the padding and list style on list elements */
+/* but only if class attribute is set. not to pure ul or ol tags. */
+
+ul[class], 
+ol[class] {
+	list-style: none;
+	padding: 0;
+}
+
+/* sets the `min-block-size` of the `body` to be `100vh` */
+/* so content can take up entire viewport */
+
+body {
+	min-block-size: 100vh;
+}
+
+html {
+	font-size: 62.5%
+}
+
+/* set images to block-level elements and sets max-inline-size to 100% */
+/* making images responsive and treat img tags like block-level elements */
+
+img {
+	display: block;
+	max-inline-size: 100%;
+}
+
+/* sets max-inline-size of text-based tags to be 60ch */
+/* 1ch === about the size of one character on any font */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5, 
+h6,
+li,
+figcaption {
+	max-width: 60ch;
+}
+
+a {
+	text-decoration: none;
+}
