@@ -1,8 +1,11 @@
 import React from 'react'
+import Slider from '../components/slider'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div className='bg-black w-screen h-screen overflow-hidden'>
+        <Slider />
+    </div>
   )
 }
 
