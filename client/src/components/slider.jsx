@@ -2,22 +2,21 @@ import React, { useState, useEffect } from 'react'
 import SliderItem from './slider-item';
 
 const Slider = () => {
+
   const [images, setImages] = useState([]);
+  
   const [selectedMovie, setSelectedMovie] = useState("The Godfather");
   
   useEffect(() => {
     const fetchRecommendations = async () => {
-      // if (selectedMovie) {
-        try {
-          const response = await fetch(`http://localhost:8000/recommendations/${selectedMovie}`);
-          const data = await response.json();
-          setImages(data.posters); // Assuming the API returns an object with a 'posters' array
-        } catch (error) {
-          console.error("Error fetching recommendations:", error);
-        }
-      // }
+      try {
+        const response = await fetch(`http://localhost:8000/recommendations/${selectedMovie}`);
+        const data = await response.json();
+        setImages(data.posters); 
+      } catch (error) {
+        console.error("Error fetching recommendations:", error);
+      }
     };
-
     fetchRecommendations();
   }, [selectedMovie]);
 

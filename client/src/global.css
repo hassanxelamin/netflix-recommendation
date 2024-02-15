@@ -62,11 +62,13 @@ ol[class] {
 /* so content can take up entire viewport */
 
 body {
+	margin: 0;
 	min-block-size: 100vh;
 }
 
 html {
-	font-size: 62.5%
+	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 /* set images to block-level elements and sets max-inline-size to 100% */
