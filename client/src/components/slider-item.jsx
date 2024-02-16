@@ -6,7 +6,7 @@ const SliderItem = ({ index, image }) => {
       key={index} 
       src={image} 
       alt={`Image ${index + 1}`} 
-      className='flex-grow-0 flex-shrink-0 max-w-[19%] aspect-video object-cover p-1 rounded-2xl'
+      className='flex-grow-0 flex-shrink-0 max-w-[15%] aspect-video object-cover p-1 rounded-2xl'
     />
   )
 }
