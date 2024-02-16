@@ -9,6 +9,9 @@ export default {
       fontFamily: {
         arial: ["Arial"],
       },
+      width: {
+        'calc': 'calc(100% - 10rem)',
+      },
     },
   },
   plugins: [],

@@ -5,7 +5,7 @@ const Slider = () => {
 
   const [images, setImages] = useState([]);
   
-  const [selectedMovie, setSelectedMovie] = useState("The Godfather");
+  const [selectedMovie, setSelectedMovie] = useState("Batman Begins");
   
   useEffect(() => {
     const fetchRecommendations = async () => {
@@ -21,15 +21,20 @@ const Slider = () => {
   }, [selectedMovie]);
 
   return (
-    <section 
-      id="container" data-name="container"
-      className='w-full py-20 flex flex-col justify-center'
-    >
-      <div className='text-white font-bold text-[2.5rem] pb-3 pl-40'>Matched to You</div>
-      <div id="slider" data-name="slider" className='flex w-full gap-x-2'>
-        {images.map((image, index) => (
-          <SliderItem key={index} index={index} image={image} />
-        ))}
+    <section className='w-full flex justify-center items-center'>
+      <div id="container" data-name="container" className='w-full flex flex-col justify-center py-20'>
+        <div className='text-white font-bold text-[2.5rem] pb-3 pl-4'>Matched to You</div>
+
+        <div id="slider-container" className='flex justify-between w-screen'>
+          <div className='z-50'>Arrow</div>
+          <div id="slider" data-name="slider" className='flex gap-x-2 translate-x-[-100%]'>
+            {images.map((image, index) => (
+              <SliderItem key={index} index={index} image={image} />
+              ))}
+          </div>
+          <div className='z-50'>Arrow</div>
+        </div>
+
       </div>
     </section>
   )
